@@ -47,7 +47,6 @@ function colourDistance(lib, colour){
     var dominant;
     for(var i=0; i<lib.length; i++) {
         dist = Math.pow(lib[i].r - colour.red, 2) + Math.pow(lib[i].g - colour.green, 2) + Math.pow(lib[i].b - colour.blue, 2);
-        console.log(dist);
         if(dist < min){
             min = dist;
             dominant = lib[i];
