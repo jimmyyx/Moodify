@@ -57,6 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-My Project-1801d8bd58b5.json
-Points_of_Interest.csv
-photos/
+config/

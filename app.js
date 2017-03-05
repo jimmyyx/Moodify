@@ -1,4 +1,4 @@
-var config = require('./config.js');
+var config = require('./config/config.js');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -29,12 +29,13 @@ var app = express();
 app.post('/upload', upload.single('image'), function(req, res, next){
     var options = {verbose: true};
 
+    console.log("?");
 	vision.detectProperties(req.file.path, options, function(err, props, apiResponse){
 		fs.unlinkSync(req.file.path);
 		if(err){
+
 			res.send(err);
 		} else {
-		    //console.log(props.colors[0]);
             var dominant = colourDistance(colours, props.colors[0]);
             res.send(dominant);
 		}
@@ -75,7 +76,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json('error');
 });
 
 module.exports = app;
