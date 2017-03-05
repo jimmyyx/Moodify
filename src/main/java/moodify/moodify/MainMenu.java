@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 public class MainMenu extends AppCompatActivity {
 
     @Override
@@ -11,6 +13,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main_menu);
-
+        GifImageView gifImageView = (GifImageView) findViewById(R.id.imageDisplay);
+        gifImageView.setGifImageResource(R.drawable.colourcircle);
     }
 }
