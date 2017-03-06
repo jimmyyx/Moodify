@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:orientation="vertical"
+    tools:context="moodify.moodify.MainMenu">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="moodify"
+            android:textSize="60sp"
+            android:textStyle="normal"
+            android:typeface="normal"
+            style="@android:style/Widget.TextView" />
+
+        <moodify.moodify.GifImageView
+
+            android:layout_marginLeft="140px"
+            android:layout_marginTop="150px"
+            android:id="@+id/imageDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="75dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:text="camera"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/leftButton"
+                android:layout_weight="1"
+                style="@android:style/Widget.Holo.Button"
+                android:textAppearance="@android:style/TextAppearance.Holo.Widget.Button"
+                android:textColor="@android:color/holo_orange_light" />
+
+            <Button
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:text="gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightButton"
+                android:layout_weight="1"
+                style="@android:style/Widget.Holo.Button"
+                android:textAppearance="@android:style/TextAppearance.Holo.Widget.Button"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:id="@+id/credits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:text="StartHacks 2017"
+            android:textColor="#b3b3b3"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</RelativeLayout>
